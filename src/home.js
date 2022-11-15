@@ -1,16 +1,34 @@
-import { useState } from "react";
+import { useState,useEffect} from "react";
+import BlogList from "./bloglist";
 const Home = () => {
-    // let sayac=0;
-    const [sayac,setSayac]=useState(0);
-    const  test=()=>{
-        // sayac++;
-      setSayac(3);
+   const [blogs,setblogs] = useState([
+    {
+        id:1,
+        ad:"blog adi",
+        content:"lorem ipsum dolor lorem...",
+        yazici:"Harry"
+    },
+    {
+        id:2,
+        ad:"blog adi",
+        content:"lorem ipsum dolor lorem...",
+        yazici:"Luffy"
+    },
+    {
+        id:3,
+        ad:"blog adi",
+        content:"lorem ipsum dolor lorem...",
+        yazici:"Zoro"
     }
+   ])
+   useEffect(()=>{})
+   const handleClick=(id)=>{
+        const newblogs=blogs.filter(blog=>blog.id!==id);
+        setblogs(newblogs);
+   }
     return ( 
-        <div>
-            <h2>Ana sehife</h2>
-            <p>{sayac}</p>
-            <button onClick={test}>tikla</button>
+        <div className="home">
+            <BlogList bloglar={blogs} baslik="butun yazilar" handleClick={handleClick}/>
         </div>
      );
 }
