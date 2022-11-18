@@ -1,34 +1,19 @@
-import { useState,useEffect} from "react";
 import BlogList from "./bloglist";
+import useFetch  from "./useFetch";
 const Home = () => {
-   const [blogs,setblogs] = useState([
-    {
-        id:1,
-        ad:"blog adi",
-        content:"lorem ipsum dolor lorem...",
-        yazici:"Harry"
-    },
-    {
-        id:2,
-        ad:"blog adi",
-        content:"lorem ipsum dolor lorem...",
-        yazici:"Luffy"
-    },
-    {
-        id:3,
-        ad:"blog adi",
-        content:"lorem ipsum dolor lorem...",
-        yazici:"Zoro"
-    }
-   ])
-   useEffect(()=>{})
-   const handleClick=(id)=>{
-        const newblogs=blogs.filter(blog=>blog.id!==id);
-        setblogs(newblogs);
-   }
+    const {data:blogs,yuklenir,xeta}=useFetch('http://localhost:8000/yazilar');
     return ( 
         <div className="home">
-            <BlogList bloglar={blogs} baslik="butun yazilar" handleClick={handleClick}/>
+            {
+                xeta && <div className="error">{xeta}</div>
+            }
+            {
+                yuklenir && <div className="loading">Yuklenir...</div>
+            }
+            {
+                blogs &&  
+                <BlogList bloglar={blogs} baslik="butun yazilar" />
+            }
         </div>
      );
 }

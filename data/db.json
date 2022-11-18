@@ -1,0 +1,22 @@
+{
+    "yazilar":[
+        {
+            "id":1,
+            "ad":"blog adi",
+            "content":"lorem ipsum dolor lorem...",
+            "yazici":"Harry"
+        },
+        {
+            "id":2,
+            "ad":"blog adi",
+            "content":"lorem ipsum dolor lorem...",
+            "yazici":"Luffy"
+        },
+        {
+            "id":3,
+            "ad":"blog adi",
+            "content":"lorem ipsum dolor lorem...",
+            "yazici":"Zoro"
+        }
+    ]
+}

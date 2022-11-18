@@ -1,6 +1,6 @@
 import React from  'react';
 
-export default function BlogList({bloglar,baslik,handleClick}){
+export default function BlogList({bloglar,baslik}){
     return(
         <div className="blog-list">
             <h2 style={{color:'#ff793f'}}>{baslik}</h2>
@@ -9,7 +9,6 @@ export default function BlogList({bloglar,baslik,handleClick}){
              <div className="blog-preview" key={blog.id}>
                  <h2>{blog.ad}</h2>
                  <p>yazici: {blog.yazici}</p>
-                 <button onClick={()=>handleClick(blog.id)}>Sil</button>
              </div>
          ))
         }

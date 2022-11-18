@@ -49,3 +49,11 @@
   margin-bottom: 8px;
   font-size: 30px;
 }
+.loading{
+  font-size: 50px;
+  color: #ff793f ;
+}
+.error{
+  color: crimson;
+  font-size: 50px;
+}
