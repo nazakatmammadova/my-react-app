@@ -17,7 +17,7 @@ const useFetch=(url)=>{
         })
         .catch(err=>{
             setyuklenir(false)
-            console.log(err.message);
+            setxeta(err.message);
         })
    },[url])
 
