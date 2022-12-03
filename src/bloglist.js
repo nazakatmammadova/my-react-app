@@ -1,5 +1,4 @@
 import React from  'react';
-
 export default function BlogList({bloglar,baslik}){
     return(
         <div className="blog-list">
