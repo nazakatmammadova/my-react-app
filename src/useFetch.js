@@ -4,8 +4,7 @@ const useFetch=(url)=>{
     const [data,setdata] = useState(null)
     const[yuklenir,setyuklenir]=useState(true)
     const[xeta,setxeta]=useState(null)
-
-    useEffect(()=>{
+     useEffect(()=>{
         fetch(url)
         .then(res=>{
             if(!res.ok) throw Error('Melumatlar cekile bilmedi')
